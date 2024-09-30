@@ -4,14 +4,12 @@ jobs:
     push-job:
         runs-on: unbuntu-latest
         steps:
-            - name: get app
+            -   name: getting_app
                 uses: actions/checkout@v4
-            
-            - name: get dependencies
-                run: npm install
-            
-            - name: build
-                run: npm run build
-            
-            - name: test
+
+            -   name: getting_dependencies
+                run: npm install            
+            -   name: build
+                run: npm run build            
+            -   name: test
                 run: npm run test
