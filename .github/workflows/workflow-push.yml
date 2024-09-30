@@ -1,0 +1,17 @@
+name: Workflow when push
+on: push
+jobs:
+    push-job:
+        runs-on: unbuntu-latest
+        steps:
+            - name: get app
+                uses: actions/checkout@v4
+            
+            - name: get dependencies
+                run: npm install
+            
+            - name: build
+                run: npm run build
+            
+            - name: test
+                run: npm run test
